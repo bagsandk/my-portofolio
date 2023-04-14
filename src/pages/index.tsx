@@ -1,124 +1,164 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import Image from "next/image";
 
 export default function Home() {
+  const porto = [
+    {
+      name: "Gudang Pro",
+      banner: "2.png",
+      desc: "Gpro is a system for conducting sales and purchase transactions with financial reports. Gpro uses codeigniter 3 with spa",
+      link: "https://gpro.centralarthaulam.com/",
+    },
+    {
+      name: "Adupi Bank Sampah",
+      banner: "1.png",
+      desc: "Adupi is an application to manage waste from several partners, adupi uses react js, leaflet, pwa and on the be uses express",
+      link: "https://admin.ekonomisirkular.org/login",
+    },
+    {
+      name: "Face Recognition",
+      banner: "4.png",
+      desc: "Face recognition is a machine learning that is used to recognize a person's face, face recognition uses python, opencv and flask",
+      link: "https://github.com/bagsandk/face_recognition",
+    },
+    {
+      name: "Dapur Indhie Landing Page",
+      banner: "3.png",
+      desc: "Dapoer indie is a small and medium enterprise engaged in the bread sector. indhie kitchen uses the svlete framework",
+      link: "https://dapurindhie.com/",
+    },
+  ];
+
+  const contact = [
+    {
+      icon: "/github.svg",
+      name: "bagsandk",
+      link: "https://github.com/bagsandk/",
+    },
+    {
+      icon: "/twitter.svg",
+      name: "bagsandk",
+      link: "https://twitter.com/bagsandk",
+    },
+    {
+      icon: "/ig.svg",
+      name: "bagasagengsandoko",
+      link: "https://www.instagram.com/bagasagengsandoko/",
+    },
+    {
+      icon: "linkedin.svg",
+      name: "bagasagengsandoko",
+      link: "https://www.linkedin.com/in/bagas-ageng-sandoko/",
+    },
+  ];
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex font-mono flex-col items-center justify-between">
+      <div className="flex w-full items-end justify-between px-2 md:px-32 border-b-2 pb-32">
+        <div className="flex flex-col justify-center w-1/2">
+          <p className="text-5xl sm:text-6xl md:text-7xl font-semibold">
+            Hello
+          </p>
+          <p className="text-5xl sm:text-6xl md:text-7xl font-semibold">
+            Im Bagas
+          </p>
+          <p className=" text-sm mt-3">Im a software developer</p>
+          <button className="border-2 bg-smoke-200 w-2/3  md:w-1/3 p-2 mt-10 hover:bg-smoke-100">
+            Download My CV
+          </button>
+        </div>
+        <div className="flex flex-col items-end w-1/2 ">
+          <Image
+            className="grayscale"
+            src="/img/poto.png"
+            alt="Bagas Ageng Sandoko"
+            width={300}
+            height={300}
+          />
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="relative bg-smoke-100 flex flex-col w-full justify-between ps-2 md:ps-32 border-b-2">
+        <div className="absolute -top-16">
+          <p className="my-2 text-lg">Quick Link</p>
+          <div className="flex w-96">
+            <a
+              href="#project"
+              className="flex bg-smoke-200 w-32 hover:bg-smoke-100 justify-between items-center border-t-2 border-s-2 border-b-2 p-2"
+            >
+              <p className="me-4">Portofolio</p>
+            </a>
+            <a
+              href="#about"
+              className="flex bg-smoke-200 w-32 hover:bg-smoke-100 justify-between items-center border-t-2 border-s-2 border-b-2 p-2"
+            >
+              <p className="me-4">About</p>
+            </a>
+            <a
+              href="#contact"
+              className="flex bg-smoke-200 w-32 hover:bg-smoke-100 justify-between items-center border-t-2 border-s-2 border-b-2 p-2 border-e-2"
+            >
+              <p className="me-4">Contact</p>
+            </a>
+          </div>
+        </div>
+        <section id="project" className="mt-10 mb-5 project ">
+          <p className="text-xl font-semibold">Projects</p>
+          <div className="flex overflow-x-auto">
+            {porto.map((v, i) => (
+              <div key={i} className="flex-none me-3">
+                <div className="flex h-96 max-w-sm justify-between flex-col border-2 my-2">
+                  <div className="flex flex-col">
+                    <div className="flex justify-center border-b-2 p-1 bg-smoke-200">
+                      <p className="text-center text-sm">{v.name}</p>
+                    </div>
+                    <Image
+                      className="grayscale"
+                      src={`/img/porto/${v.banner}`}
+                      alt={v.name}
+                      width={500}
+                      height={500}
+                    />
+                    <div className="flex flex-col p-2 border-t-2">
+                      <p className="text-md font-semibold mt-2">{v.name}</p>
+                      <p className="text-sm mb-2">{v.desc}</p>
+                    </div>
+                  </div>
+                  <a
+                    target="_blank"
+                    href={v.link}
+                    className="w-1/3 px-1 ms-2 text-center mb-1 hover:bg-smoke-100 bg-smoke-200 border-2"
+                  >
+                    Link
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+        <section id="about" className="mt-10 mb-5 about">
+          <p className="text-xl font-semibold">About</p>
+          <div className="flex mt-5">
+            <p>There is nothing special about me, I just try to learn and learn</p>
+          </div>
+        </section>
+        <section id="contact" className="mt-10 mb-5 contact">
+          <p className="text-xl font-semibold">Contact</p>
+          <ul className="list-inside text-slate-900 dark:text-slate-200 mt-5">
+            {contact.map((v, i) => (
+              <li key={i}>
+                <a target="_blank" href={v.link} className="flex items-center">
+                  <Image
+                    className="grayscale me-2"
+                    src={v.icon}
+                    alt={`alt-${v.name}`}
+                    width={20}
+                    height={20}
+                  />
+                  <p>{v.name}</p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
       </div>
     </main>
-  )
+  );
 }
